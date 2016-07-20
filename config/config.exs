@@ -23,6 +23,13 @@ config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:request_id]
 
+config :guardian, Guardian,
+  issuer: "PhoenixTrello",
+  ttl: { 3, :days },
+  verify_issuer: true,
+  secret_key: "9a7TTEXaz1S1y+MEFo/q0JwXXLKY2W8gtuasv87k1AX7eWFAx2erSeOhcNtba1Bz",
+  serializer: PhoenixTrello.GuardianSerializer
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env}.exs"

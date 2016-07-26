@@ -9,6 +9,7 @@ const store = configureStore(browserHistory);
 const history = syncHistoryWithStore(browserHistory, store);
 
 const target = document.getElementById('main_container');
-// const node = <Root routerHistory={history} store={store} />;
+const node = <Root routerHistory={history} store={store} />;
 
 ReactDOM.render(node, target);
+console.log("loaded application.js");

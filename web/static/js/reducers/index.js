@@ -1,7 +1,7 @@
 //web/static/js/reducers/index.js
 
 import { combineReducers }  from 'redux';
-import { routeReducer }     from 'redux-simple-router';
+import { routeReducer }     from 'react-router-redux';
 import session              from './session';
 
 export default combineReducers({
